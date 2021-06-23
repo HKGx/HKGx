@@ -15,3 +15,5 @@ Programming quite quickly became my hobby and I've dedicated many many hours to 
 
 ![Most used languages tab](https://github-readme-stats.vercel.app/api/top-langs/?username=hkgx&layout=compact)
 
+
+[![https://www.linkedin.com/in/hubert-kowalski-7526a51a1/](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin)]()
