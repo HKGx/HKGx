@@ -2,5 +2,10 @@ import Page from "../components/Page";
 
 export default () =>
   Page({
-    component: <h1> Lorem ipsum sit dolor amet </h1>,
+    component: (
+      <h1>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer ac
+        lorem ac risus facilisis gravida et eget odio.
+      </h1>
+    ),
   });
