@@ -1,26 +1,43 @@
-import { Navbar } from "@mantine/core";
-import { NavLink } from "react-router-dom";
-import DarkModeSwitch from "./DarkModeSwitch";
-import SocialLink from "./SocialLink";
+import { Container, createStyles, Header } from "@mantine/core";
+import NavbarCenter from "./NavbarCenter";
+import NavbarLeft from "./NavbarLeft";
+import NavbarRight from "./NavbarRight";
 
-const NavbarRightPart = () => (
-  <Navbar.Section>
-    <SocialLink iconType="github" />
-    <SocialLink iconType="linkedin" />
-    <DarkModeSwitch />
-  </Navbar.Section>
-);
+const PAGES = [
+  {
+    link: "/",
+    title: "Home",
+  },
+  {
+    link: "/resume",
+    title: "Resume",
+  },
+] as const;
+
+const useStyles = createStyles((theme) => ({
+  headerRoot: {
+    position: "relative",
+    zIndex: 1,
+  },
+  header: {
+    display: "flex",
+    flexDirection: "row",
+    alignItems: "center",
+    justifyContent: "space-between",
+    height: "100%",
+  },
+}));
 
 const CustomizedNavbar = () => {
+  const { classes } = useStyles();
   return (
-    <Navbar withBorder fixed={false} position={{ top: 0, left: 0 }}>
-      <Navbar.Section>hkg does dev</Navbar.Section>
-      <Navbar.Section grow>
-        <NavLink to="/"> Main </NavLink>
-        <NavLink to="/resume"> Resume </NavLink>
-      </Navbar.Section>
-      <NavbarRightPart />
-    </Navbar>
+    <Header height={"4em"} className={classes.headerRoot}>
+      <Container className={classes.header}>
+        <NavbarLeft />
+        <NavbarCenter pages={PAGES} />
+        <NavbarRight />
+      </Container>
+    </Header>
   );
 };
 
