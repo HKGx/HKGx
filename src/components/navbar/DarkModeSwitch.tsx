@@ -9,8 +9,8 @@ const DarkModeSwitch = () => {
     <Switch
       checked={theme === "light"}
       onChange={toggle}
-      onLabel={<BsMoon />}
-      offLabel={<BsSun />}
+      offLabel={<BsMoon size="2em" />}
+      onLabel={<BsSun size="2em" />}
     />
   );
 };
