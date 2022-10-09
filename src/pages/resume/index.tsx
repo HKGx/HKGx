@@ -10,8 +10,8 @@ const ResumePage = () => {
   );
 };
 
-export default () => {
-  return Page({
-    component: <ResumePage />,
-  });
-};
+export default () => (
+  <Page>
+    <ResumePage />
+  </Page>
+);

@@ -2,14 +2,14 @@ import { Container } from "@mantine/core";
 import Navbar from "./navbar";
 
 type Props = {
-  component: JSX.Element;
+  children: JSX.Element;
 };
 
-const Page = ({ component }: Props) => {
+const Page = ({ children }: Props) => {
   return (
     <Container fluid>
       <Navbar />
-      {component}
+      <Container px="lg">{children}</Container>
     </Container>
   );
 };
