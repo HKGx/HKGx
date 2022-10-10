@@ -1,5 +1,6 @@
-import { Anchor } from "@mantine/core";
+import { ActionIcon } from "@mantine/core";
 import { BsGithub, BsLinkedin } from "react-icons/bs";
+import { Link } from "react-router-dom";
 
 const Icons = {
   github: { icon: BsGithub, url: "https://www.github.com/HKGx" },
@@ -16,9 +17,14 @@ type Props = {
 const SocialLink = ({ iconType }: Props) => {
   const { icon, url } = Icons[iconType];
   return (
-    <Anchor href={url} target="_blank" rel="noopener noreferrer">
+    <ActionIcon
+      component="a"
+      href={url}
+      target="_blank"
+      rel="noopener noreferrer"
+    >
       {icon({ size: 24 })}
-    </Anchor>
+    </ActionIcon>
   );
 };
 
