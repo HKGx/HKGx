@@ -28,7 +28,7 @@ type Props = {
 const CustomizedNavbar = ({ ref }: Props) => {
   const { classes } = useStyles();
   return (
-    <Header heigth={"4em"} className={classes.baseHeader} ref={ref}>
+    <Header height={"4em"} className={classes.baseHeader} ref={ref}>
       <Group position="apart" align="center">
         <NavbarLeft />
         <NavbarCenter pages={PAGES} />
