@@ -6,6 +6,7 @@ const DarkModeSwitch = () => {
   const [theme, toggle] = useDarkTheme();
   return (
     <Switch
+      size="md"
       checked={theme === "light"}
       onChange={toggle}
       offLabel={<BsMoon size="2em" />}
