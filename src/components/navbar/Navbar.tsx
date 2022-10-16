@@ -1,4 +1,4 @@
-import { Container, createStyles, Header } from "@mantine/core";
+import { createStyles, Group, Header } from "@mantine/core";
 import NavbarCenter from "./NavbarCenter";
 import NavbarLeft from "./NavbarLeft";
 import NavbarRight from "./NavbarRight";
@@ -15,28 +15,25 @@ const PAGES = [
 ] as const;
 
 const useStyles = createStyles((theme) => ({
-  headerRoot: {
-    position: "relative",
+  baseHeader: {
     zIndex: 1,
-  },
-  header: {
-    display: "flex",
-    flexDirection: "row",
-    alignItems: "center",
-    justifyContent: "space-between",
-    height: "100%",
+    minWidth: "400px",
   },
 }));
 
-const CustomizedNavbar = () => {
+type Props = {
+  ref: React.RefObject<HTMLDivElement>;
+};
+
+const CustomizedNavbar = ({ ref }: Props) => {
   const { classes } = useStyles();
   return (
-    <Header height={"4em"} className={classes.headerRoot}>
-      <Container className={classes.header}>
+    <Header className={classes.baseHeader} ref={ref}>
+      <Group position="apart" align="center">
         <NavbarLeft />
         <NavbarCenter pages={PAGES} />
         <NavbarRight />
-      </Container>
+      </Group>
     </Header>
   );
 };
