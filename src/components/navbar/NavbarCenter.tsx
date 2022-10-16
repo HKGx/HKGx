@@ -1,5 +1,6 @@
 import { Anchor, Group, Title } from "@mantine/core";
 import { Link, useLocation } from "react-router-dom";
+import useDarkTheme from "../../hooks/useDarkTheme";
 
 type PageAnchorProps = {
   readonly link: `/${string}`;
@@ -11,10 +12,12 @@ const NavbarPageLink = ({
   title,
   pathname,
 }: PageAnchorProps & { pathname: string }) => {
+  const [theme] = useDarkTheme();
   const order = pathname === link ? 1 : 2;
-  const color = pathname === link ? "white" : undefined;
+  const themeColor = theme === "dark" ? "white" : "dark";
+  const color = pathname === link ? themeColor : undefined;
   return (
-    <Anchor component={Link} to={link} >
+    <Anchor component={Link} to={link}>
       <Title order={order} color={color}>
         {title}
       </Title>
@@ -26,7 +29,7 @@ const NavbarCenter = ({ pages }: { pages: readonly PageAnchorProps[] }) => {
   const { pathname } = useLocation();
 
   return (
-    <Group spacing="xl">
+    <Group spacing="xl" styles={{ minWidth: 400 }} position="apart">
       {pages.map((page, idx) => (
         <NavbarPageLink {...page} pathname={pathname} key={idx} />
       ))}
