@@ -1,6 +1,5 @@
 import { ActionIcon } from "@mantine/core";
 import { BsGithub, BsLinkedin } from "react-icons/bs";
-import { Link } from "react-router-dom";
 
 const Icons = {
   github: { icon: BsGithub, url: "https://www.github.com/HKGx" },

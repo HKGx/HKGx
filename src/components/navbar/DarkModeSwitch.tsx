@@ -1,5 +1,4 @@
 import { Switch } from "@mantine/core";
-import { useColorScheme } from "@mantine/hooks";
 import { BsSun, BsMoon } from "react-icons/bs";
 import useDarkTheme from "../../hooks/useDarkTheme";
 
