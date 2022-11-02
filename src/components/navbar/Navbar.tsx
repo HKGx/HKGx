@@ -1,7 +1,7 @@
-import { createStyles, Group, Header } from "@mantine/core";
-import NavbarCenter from "./NavbarCenter";
-import NavbarLeft from "./NavbarLeft";
-import NavbarRight from "./NavbarRight";
+import { createStyles, Group, MediaQuery, Paper } from "@mantine/core";
+import { NavbarCenter } from "./NavbarCenter";
+import { NavbarLeft } from "./NavbarLeft";
+import { NavbarRight } from "./NavbarRight";
 
 const PAGES = [
   {
@@ -18,24 +18,24 @@ const useStyles = createStyles((theme) => ({
   baseHeader: {
     zIndex: 1,
     minWidth: "400px",
+    borderBottom: `1px solid ${
+      theme.colorScheme === "dark" ? theme.colors.dark[5] : theme.colors.gray[2]
+    }`,
+    marginBottom: theme.spacing.xs,
   },
 }));
 
-type Props = {
-  ref: React.RefObject<HTMLDivElement>;
-};
-
-const CustomizedNavbar = ({ ref }: Props) => {
+export const Navbar = () => {
   const { classes } = useStyles();
   return (
-    <Header height={"4em"} className={classes.baseHeader} ref={ref}>
-      <Group position="apart" align="center">
-        <NavbarLeft />
-        <NavbarCenter pages={PAGES} />
-        <NavbarRight />
-      </Group>
-    </Header>
+    <MediaQuery query="print" styles={{ display: "none" }}>
+      <Paper className={classes.baseHeader}>
+        <Group position="apart" align="center">
+          <NavbarLeft />
+          <NavbarCenter pages={PAGES} />
+          <NavbarRight />
+        </Group>
+      </Paper>
+    </MediaQuery>
   );
 };
-
-export default CustomizedNavbar;

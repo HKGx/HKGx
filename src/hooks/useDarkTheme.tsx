@@ -1,8 +1,9 @@
 import { ColorScheme } from "@mantine/core";
-import { useColorScheme, useLocalStorage } from "@mantine/hooks";
+import { useColorScheme, useLocalStorage, useMediaQuery } from "@mantine/hooks";
 
-export default function useDarkTheme(defaultValue?: ColorScheme) {
+export function useDarkTheme(defaultValue?: ColorScheme) {
   const preferedColorScheme = useColorScheme();
+  const isPrinting = useMediaQuery("print");
   const [theme, setTheme] = useLocalStorage<ColorScheme>({
     defaultValue: defaultValue ?? preferedColorScheme,
     key: "darkTheme",
@@ -10,6 +11,6 @@ export default function useDarkTheme(defaultValue?: ColorScheme) {
   });
 
   const toggleTheme = () => setTheme(theme === "dark" ? "light" : "dark");
-
-  return [theme, toggleTheme] as const;
+  const properTheme = isPrinting ? "light" : theme; // Prevents printing in dark mode
+  return [properTheme, toggleTheme] as const;
 }

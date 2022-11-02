@@ -1,6 +1,6 @@
 import { Code, MediaQuery, Title } from "@mantine/core";
 
-const NavbarLeft = () => (
+export const NavbarLeft = () => (
   <MediaQuery smallerThan="sm" styles={{ display: "none" }}>
     <Title order={2}>
       hkg does {""}
@@ -14,5 +14,3 @@ const NavbarLeft = () => (
     </Title>
   </MediaQuery>
 );
-
-export default NavbarLeft;

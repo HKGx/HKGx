@@ -13,7 +13,7 @@ type Props = {
   iconType: keyof typeof Icons;
 };
 
-const SocialLink = ({ iconType }: Props) => {
+export const SocialLink = ({ iconType }: Props) => {
   const { icon, url } = Icons[iconType];
   return (
     <ActionIcon
@@ -26,5 +26,3 @@ const SocialLink = ({ iconType }: Props) => {
     </ActionIcon>
   );
 };
-
-export default SocialLink;

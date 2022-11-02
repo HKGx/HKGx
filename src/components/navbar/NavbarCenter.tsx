@@ -1,6 +1,6 @@
 import { Anchor, Group, Title } from "@mantine/core";
 import { Link, useLocation } from "react-router-dom";
-import useDarkTheme from "../../hooks/useDarkTheme";
+import { useDarkTheme } from "../../hooks";
 
 type PageAnchorProps = {
   readonly link: `/${string}`;
@@ -25,7 +25,11 @@ const NavbarPageLink = ({
   );
 };
 
-const NavbarCenter = ({ pages }: { pages: readonly PageAnchorProps[] }) => {
+export const NavbarCenter = ({
+  pages,
+}: {
+  pages: readonly PageAnchorProps[];
+}) => {
   const { pathname } = useLocation();
 
   return (
@@ -36,5 +40,3 @@ const NavbarCenter = ({ pages }: { pages: readonly PageAnchorProps[] }) => {
     </Group>
   );
 };
-
-export default NavbarCenter;
