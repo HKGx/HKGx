@@ -1,10 +1,8 @@
 import { createHashRouter, RouterProvider } from "react-router-dom";
-import Resume from "./pages/resume";
-import MainPage from "./pages/MainPage";
-import { lazy, Suspense } from "react";
-import { useColorScheme } from "@mantine/hooks";
 import { MantineProvider } from "@mantine/core";
-import useDarkTheme from "./hooks/useDarkTheme";
+import { ResumePage } from "./pages/resume";
+import { MainPage } from "./pages/MainPage";
+import { useDarkTheme } from "./hooks";
 
 const router = createHashRouter([
   {
@@ -13,7 +11,7 @@ const router = createHashRouter([
   },
   {
     path: "/resume",
-    element: <Resume />,
+    element: <ResumePage />,
   },
 ]);
 

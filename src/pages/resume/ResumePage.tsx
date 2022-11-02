@@ -1,31 +1,14 @@
-import {
-  Center,
-  Container,
-  Grid,
-  Image,
-  Paper,
-  SimpleGrid,
-  Stack,
-  Timeline,
-  Title,
-  Text,
-  Anchor,
-  Group,
-  Slider,
-  Checkbox,
-  MediaQuery,
-  useMantineTheme,
-} from "@mantine/core";
-import { BsCode, BsGlobe, BsPerson } from "react-icons/bs";
-import { Page } from "../../components/Page";
+import { Grid, Stack, Text, Timeline, Title } from "@mantine/core";
+import { useMediaQuery } from "@mantine/hooks";
+import { BsCode, BsPerson } from "react-icons/bs";
 import { ExternalLink } from "../../components/ExternalLink";
+import { Page } from "../../components/Page";
+import { ResumeBlock } from "./ResumeBlock";
+import { LanguageProficiency, SkillProficiency } from "./skills/Proficiencies";
 import {
   LanguageProficiencyBlock,
   SkillProficiencyBlock,
 } from "./skills/ProficiencyBlock";
-import { LanguageProficiency, SkillProficiency } from "./skills/Proficiencies";
-import { useMediaQuery } from "@mantine/hooks";
-import { ResumeBlock } from "./ResumeBlock";
 
 const AvatarBlock = () => (
   <ResumeBlock title={<Text align="center">There will be a photo</Text>}>
@@ -154,33 +137,29 @@ const GdprClause = () => {
   ) : null;
 };
 
-const ResumePage = () => {
+export const ResumePage = () => {
   return (
-    <Stack>
-      <Grid>
-        <Grid.Col span={4}>
-          <AvatarBlock />
-        </Grid.Col>
-        <Grid.Col span={8}>
-          <IntroductionBlock />
-        </Grid.Col>
-        <Grid.Col span={12}>
-          <ExperienceTimelineBlock />
-        </Grid.Col>
-        <Grid.Col span={6}>
-          <ProrgammingSkillsBlock />
-        </Grid.Col>
-        <Grid.Col span={6}>
-          <LangaugeSkillsBlock />
-        </Grid.Col>
-      </Grid>
-      <GdprClause />
-    </Stack>
+    <Page>
+      <Stack>
+        <Grid>
+          <Grid.Col span={4}>
+            <AvatarBlock />
+          </Grid.Col>
+          <Grid.Col span={8}>
+            <IntroductionBlock />
+          </Grid.Col>
+          <Grid.Col span={12}>
+            <ExperienceTimelineBlock />
+          </Grid.Col>
+          <Grid.Col span={6}>
+            <ProrgammingSkillsBlock />
+          </Grid.Col>
+          <Grid.Col span={6}>
+            <LangaugeSkillsBlock />
+          </Grid.Col>
+        </Grid>
+        <GdprClause />
+      </Stack>
+    </Page>
   );
 };
-
-export default () => (
-  <Page>
-    <ResumePage />
-  </Page>
-);

@@ -1,6 +1,6 @@
 import { Page } from "../components/Page";
 
-export default () => (
+export const MainPage = () => (
   <Page>
     <h1>
       Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer ac lorem
