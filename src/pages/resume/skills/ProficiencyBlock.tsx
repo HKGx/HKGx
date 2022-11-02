@@ -10,10 +10,10 @@ export function SkillProficiencyBlock({
 }) {
   return (
     <Stack spacing={0} align="center" justify="center">
-      <Title align="center" order={4}>
+      <Text align="center" size="md" weight={700}>
         {skill}
-      </Title>
-      <Text align="center" size="sm">
+      </Text>
+      <Text align="center" size="sm" italic>
         {proficiency}
       </Text>
     </Stack>
@@ -28,11 +28,11 @@ export function LanguageProficiencyBlock({
   proficiency: LanguageProficiency;
 }) {
   return (
-    <Stack spacing={0} align="space" justify="center">
-      <Title align="center" order={4}>
+    <Stack spacing={0} align="center" justify="center">
+      <Text align="center" size="md" weight={700}>
         {skill}
-      </Title>
-      <Text align="center" size="sm">
+      </Text>
+      <Text align="center" size="sm" italic>
         {proficiency}
       </Text>
     </Stack>
