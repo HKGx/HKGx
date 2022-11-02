@@ -1,9 +1,9 @@
-import { Grid, Stack, Text, Timeline, Title } from "@mantine/core";
+import { Grid, Group, Stack, Text, Timeline, Title } from "@mantine/core";
 import { useMediaQuery } from "@mantine/hooks";
 import { BsCode, BsPerson } from "react-icons/bs";
 import { ExternalLink } from "../../components/ExternalLink";
 import { Page } from "../../components/Page";
-import { ResumeBlock } from "./ResumeBlock";
+import { ResumeBlock, ResumeBlockTitle } from "./ResumeBlock";
 import { LanguageProficiency, SkillProficiency } from "./skills/Proficiencies";
 import {
   LanguageProficiencyBlock,
@@ -11,26 +11,28 @@ import {
 } from "./skills/ProficiencyBlock";
 
 const AvatarBlock = () => (
-  <ResumeBlock title={<Text align="center">There will be a photo</Text>}>
-    <BsPerson size={"2em"} />
+  <ResumeBlock
+    title={<ResumeBlockTitle>There will be a photo</ResumeBlockTitle>}
+  >
+    <BsPerson size="2em" />
   </ResumeBlock>
 );
 
 const IntroductionBlock = () => (
-  <ResumeBlock title={<Title align="center">Hubert Kowalski</Title>}>
-    <Text size="sm" align="center">
+  <ResumeBlock title={<ResumeBlockTitle>Hubert Kowalski</ResumeBlockTitle>}>
+    <Text align="center" size="md">
       Web/Fullstack Developer
+    </Text>
+    <Text align="center" size="sm">
+      I am a passionate developer leaning towards the web. I have experience in
+      both frontend and backend development.
     </Text>
   </ResumeBlock>
 );
 
 const ExperienceTimelineBlock = () => (
   <ResumeBlock
-    title={
-      <Title align="center" order={2}>
-        Education and experiences
-      </Title>
-    }
+    title={<ResumeBlockTitle>Education and experiences</ResumeBlockTitle>}
   >
     <Timeline>
       <Timeline.Item title="Highschool Graduation">
@@ -74,13 +76,7 @@ const ExperienceTimelineBlock = () => (
 );
 
 const ProrgammingSkillsBlock = () => (
-  <ResumeBlock
-    title={
-      <Title align="center" order={2}>
-        Programming Languages
-      </Title>
-    }
-  >
+  <ResumeBlock title={<ResumeBlockTitle>Technologies</ResumeBlockTitle>}>
     <SkillProficiencyBlock
       skill="JavaScript"
       proficiency={SkillProficiency.Beginner}
@@ -98,21 +94,17 @@ const ProrgammingSkillsBlock = () => (
 );
 
 const LangaugeSkillsBlock = () => (
-  <ResumeBlock
-    title={
-      <Title align="center" order={2}>
-        Languages
-      </Title>
-    }
-  >
-    <LanguageProficiencyBlock
-      skill="Polish"
-      proficiency={LanguageProficiency.Native}
-    />
-    <LanguageProficiencyBlock
-      skill="English"
-      proficiency={LanguageProficiency.Fluent}
-    />
+  <ResumeBlock title={<ResumeBlockTitle>Languages</ResumeBlockTitle>}>
+    <Group>
+      <LanguageProficiencyBlock
+        skill="Polish"
+        proficiency={LanguageProficiency.Native}
+      />
+      <LanguageProficiencyBlock
+        skill="English"
+        proficiency={LanguageProficiency.Fluent}
+      />
+    </Group>
   </ResumeBlock>
 );
 
@@ -155,6 +147,11 @@ export const ResumePage = () => {
             <ProrgammingSkillsBlock />
           </Grid.Col>
           <Grid.Col span={6}>
+            <ResumeBlock title={<ResumeBlockTitle>trl </ResumeBlockTitle>}>
+              a
+            </ResumeBlock>
+          </Grid.Col>
+          <Grid.Col span={12}>
             <LangaugeSkillsBlock />
           </Grid.Col>
         </Grid>
