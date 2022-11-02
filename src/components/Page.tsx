@@ -1,14 +1,8 @@
-import {
-  ActionIcon,
-  Affix,
-  Container,
-  Transition,
-  useMantineTheme,
-} from "@mantine/core";
+import { ActionIcon, Affix, Container, Transition } from "@mantine/core";
 import { useWindowScroll } from "@mantine/hooks";
+import { ReactNode } from "react";
 import { BsArrowUp } from "react-icons/bs";
 import { Navbar } from "./navbar";
-import { ReactNode } from "react";
 
 type Props = {
   children: ReactNode;

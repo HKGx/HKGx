@@ -1,4 +1,4 @@
-import { Grid, Group, Stack, Text, Timeline, Title } from "@mantine/core";
+import { Grid, Group, Stack, Text, Timeline } from "@mantine/core";
 import { useMediaQuery } from "@mantine/hooks";
 import { BsCode, BsPerson } from "react-icons/bs";
 import { ExternalLink } from "../../components/ExternalLink";
@@ -7,7 +7,7 @@ import { ResumeBlock, ResumeBlockTitle } from "./ResumeBlock";
 import { LanguageProficiency, SkillProficiency } from "./skills/Proficiencies";
 import {
   LanguageProficiencyBlock,
-  SkillProficiencyBlock,
+  SkillProficiencyBlock
 } from "./skills/ProficiencyBlock";
 
 const AvatarBlock = () => (

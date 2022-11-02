@@ -1,4 +1,4 @@
-import { Stack, Title, Text } from "@mantine/core";
+import { Stack, Text } from "@mantine/core";
 import { LanguageProficiency, SkillProficiency } from "./Proficiencies";
 
 export function SkillProficiencyBlock({

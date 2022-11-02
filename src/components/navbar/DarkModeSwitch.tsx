@@ -1,5 +1,5 @@
 import { Switch } from "@mantine/core";
-import { BsSun, BsMoon } from "react-icons/bs";
+import { BsMoon, BsSun } from "react-icons/bs";
 import { useDarkTheme } from "../../hooks";
 
 export const DarkModeSwitch = () => {
