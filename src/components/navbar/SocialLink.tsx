@@ -1,11 +1,16 @@
 import { ActionIcon } from "@mantine/core";
-import { BsGithub, BsLinkedin } from "react-icons/bs";
+import { BsEnvelope, BsGithub, BsLinkedin } from "react-icons/bs";
+import { EMAIL, GITHUB_LINK, LINKEDIN_LINK } from "../../common/links";
 
 const Icons = {
-  github: { icon: BsGithub, url: "https://www.github.com/HKGx" },
+  github: { icon: BsGithub, url: GITHUB_LINK },
   linkedin: {
     icon: BsLinkedin,
-    url: "https://www.linkedin.com/in/hkgdoesdev/",
+    url: LINKEDIN_LINK,
+  },
+  email: {
+    icon: BsEnvelope,
+    url: `mailto:${EMAIL}`,
   },
 } as const;
 
