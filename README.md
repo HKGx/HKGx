@@ -6,6 +6,10 @@ This year, 2022, I've did an internship at [OmniCalculator](https://www.omnicalc
 
 
 - 🔭 I'm currently looking for some opportunities.
+- 🛠️ Currently working on: 
+  - [perhaps](https://github.com/HKGx/perhaps) a monadic way to handle data in Python
+  - [lamb](https://github.com/HKGx/lamb) a discord bot suited for my needs, written in Python 
+  - [perkwunos](https://github.com/HKGx/perkwunos) is Python based programming language implementation that's built upon *perhaps*.
 - 😄 Pronouns: he/him
 
 
