@@ -4,21 +4,17 @@ Programming quite quickly became my hobby and I've dedicated many many hours to 
 
 This year, 2022, I've did an internship at [OmniCalculator](https://www.omnicalculator.com/) and just recently I have started studying at Łódź University of Technology.
 
-
-- 🔭 I'm currently looking for some opportunities.
-- 🛠️ Currently working on: 
-  - [perhaps](https://github.com/HKGx/perhaps) a monadic way to handle data in Python
-  - [lambo](https://github.com/HKGx/lambo) a discord bot suited for my needs, written in Python 
-  - [perkwunos](https://github.com/HKGx/perkwunos) is Python based programming language implementation that's built upon *perhaps*.
-- 😄 Pronouns: he/him
-
+  
+- 👤 Pronouns: he/him
+- 🛠️ WIP:
+  - A simple [personal static site](https://hkgx.github.io/HKGx/)
+  - [rendertex](https://github.com/HKGx/rendertex) rework, because I cannot stand it is so barebone
+  - I spent some time implementing monadic *Maybe* in Python: [perhaps](https://github.com/HKGx/perhaps)
 
 
 ![Most used languages tab](https://github-readme-stats.vercel.app/api/top-langs/?username=hkgx&layout=compact)
 
 
-👇
 
 [![](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin)](https://www.linkedin.com/in/hubert-kowalski-7526a51a1/)
 
-☝️
