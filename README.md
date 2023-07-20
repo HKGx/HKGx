@@ -2,7 +2,7 @@ I've started coding for real back in 2017, when I created [Yui](https://github.c
 Programming quite quickly became my hobby and I've dedicated many many hours to it.
 
 
-This year, 2022, I've did an internship at [OmniCalculator](https://www.omnicalculator.com/) and just recently I have started studying at Łódź University of Technology.
+This year, 2022, I've did an internship at [OmniCalculator](https://www.omnicalculator.com/).
 
   
 - 👤 Pronouns: he/him
