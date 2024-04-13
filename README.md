@@ -12,9 +12,5 @@ Back in 2022, I've did an internship at [OmniCalculator](https://www.omnicalcula
   - I spent some time implementing monadic *Maybe* in Python: [perhaps](https://github.com/HKGx/perhaps)
 
 
-![Most used languages tab](https://github-readme-stats.vercel.app/api/top-langs/?username=hkgx&layout=compact)
-
-
-
 [![](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin)](https://www.linkedin.com/in/hubert-kowalski-7526a51a1/)
 
